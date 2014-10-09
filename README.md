@@ -11,7 +11,6 @@ On the fronted I started off from a Yeoman scaffold for an Angular project.
 
 TODO:
 
-- unit testig
 - e2e testing
 
 

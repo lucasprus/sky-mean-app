@@ -8,7 +8,7 @@ angular.module('skyMeanAppApp.controllers', ['skyMeanAppApp.services'])
       'Karma'
     ];
   }])
-  .controller('SignInFormController', ['$scope', 'Session', 'AlertMessagesService', function ($scope, Session, AlertMessagesService) {
+  .controller('SignInFormController', ['$scope', 'Session', 'AlertMessagesService', '$location', function ($scope, Session, AlertMessagesService, $location) {
     $scope.word = /^\s*\w*\s*$/;
     $scope.loginAttempts = [];
     $scope.user = {
@@ -24,6 +24,7 @@ angular.module('skyMeanAppApp.controllers', ['skyMeanAppApp.services'])
           type: 'success',
           message: message
         });
+        $location.path('/restricted-content');
       }, function (message) {
         AlertMessagesService.push({
           type: 'danger',
@@ -80,22 +81,3 @@ angular.module('skyMeanAppApp.controllers', ['skyMeanAppApp.services'])
       };
     }
   ]);
-
-
-/*var injector = angular.injector(['ng', 'skyMeanAppApp']);
-
-injector.invoke(function(Session) {
-  Session.start({username: 'bbgrfs', password: 'bbgrfs'}, function() {
-    console.log('success');
-  }, function() {
-    console.log('error');
-  });
-});
-
-injector.invoke(function(Session) {
-  Session.destroy(function() {
-    console.log('success');
-  }, function() {
-    console.log('error');
-  });
-});*/

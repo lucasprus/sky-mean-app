@@ -363,6 +363,12 @@ module.exports = function (grunt) {
       server: {
         src: ['data/**/*.js', 'routes/**/*.js', 'app.js']
       },
+      test: {
+        options: {
+          jshintrc: 'test/.jshintrc'
+        },
+        src: ['test/spec/{,*/}*.js']
+      },      
       options: {
         js: {
           jslintHappy: true,
