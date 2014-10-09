@@ -1,5 +1,20 @@
 # sky-mean-app
 
+
+If in trouble with the setup please chase me on Skype at "lukasz.prus." or email me at "lucas.prus@gmail.com".
+
+I use ExpressJS on the backend. Sign in attempts are stored in a MongoDB database hosted by https://www.compose.io/. Mongoose driver is used to communicate between the two. Ping me on Skype/email and I will give you access to the DB so you can see records updating as a user tries to sign in.
+
+Session is maintained by session cookies. Note that session age is set to 20 seconds. That can be customized in app.js file.
+
+On the fronted I started off from a Yeoman scaffold for an Angular project.
+
+TODO:
+
+- unit testig
+- e2e testing
+
+
 ## Local setup:
 
 Run the following from the root folder of the project:
@@ -39,7 +54,7 @@ grunt test
 grunt build
 ```
 
-Start the app:
+### Start the app:
 
 ```shell
 node app
@@ -53,7 +68,7 @@ Production version:
 
 http://localhost:3000/production/
 
-## Heroku live demo:
+## Heroku live demo (to be added when Heroku is back up: https://status.heroku.com/):
 
 Development version:
 
