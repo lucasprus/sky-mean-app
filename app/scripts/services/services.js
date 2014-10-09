@@ -5,12 +5,12 @@ angular.module('skyMeanAppApp.services', [])
 
     return {
       start: function (user, onSuccess, onError) {
-        $http.post('http://localhost:3000/session', user)
+        $http.post('/session', user)
           .success(onSuccess)
           .error(onError);
       },
       destroy: function (onSuccess, onError) {
-        $http.delete('http://localhost:3000/session')
+        $http.delete('/session')
           .success(onSuccess)
           .error(onError);
       }

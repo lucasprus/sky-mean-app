@@ -41,7 +41,7 @@ angular.module('skyMeanAppApp.controllers', ['skyMeanAppApp.services'])
   }])
   .controller('RestrictedContentController', ['$scope', '$http', 'AlertMessagesService', function ($scope, $http, AlertMessagesService) {
 
-    $http.get('http://localhost:3000/restricted-content')
+    $http.get('/restricted-content')
       .success(function (content) {
         $scope.content = content;
       })
