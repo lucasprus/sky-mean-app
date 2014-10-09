@@ -12,8 +12,9 @@ var jsonParser = bodyParser.json({
 module.exports = function (app) {
   app.post('/session', notLoggedIn, jsonParser, function (req, res) {
     console.log('req.body', req.body);
+    var users = ['user', 'manager', 'admin', 'developer', 'tester'];
 
-    if (req.body.username === req.body.password) {
+    if (users.indexOf(req.body.username.toLowerCase()) > -1 && req.body.password === 'password') {
       req.session.user = {
         username: req.body.username,
         password: req.body.password
