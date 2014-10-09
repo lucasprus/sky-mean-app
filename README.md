@@ -68,7 +68,9 @@ Production version:
 
 http://localhost:3000/production/
 
-## Heroku live demo (to be added when Heroku is back up: https://status.heroku.com/):
+## Heroku live demo:
+
+Demo is hosted on a free Heroku plan so it might take a few seconds to wake it up.
 
 Development version:
 
