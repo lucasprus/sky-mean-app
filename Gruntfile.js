@@ -128,6 +128,12 @@ module.exports = function (grunt) {
         },
         src: ['test/spec/{,*/}*.js']
       },
+      e2eTest: {
+        options: {
+          jshintrc: 'test/.jshintrc'
+        },
+        src: ['e2eTest/spec/{,*/}*.js']
+      },
       server: {
         src: ['data/**/*.js', 'routes/**/*.js', 'app.js']
       }
@@ -364,11 +370,11 @@ module.exports = function (grunt) {
         src: ['data/**/*.js', 'routes/**/*.js', 'app.js']
       },
       test: {
-        options: {
-          jshintrc: 'test/.jshintrc'
-        },
         src: ['test/spec/{,*/}*.js']
-      },      
+      },
+      e2eTest: {
+        src: ['e2eTest/spec/{,*/}*.js']
+      },
       options: {
         js: {
           jslintHappy: true,

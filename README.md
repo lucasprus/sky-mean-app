@@ -1,5 +1,4 @@
-# sky-mean-app
-
+# SKY MEAN app
 
 If in trouble with the setup please chase me on Skype at "lukasz.prus." or email me at "lucas.prus@gmail.com".
 
@@ -9,16 +8,11 @@ Session is maintained by session cookies. Note that session age is set to 20 sec
 
 On the fronted I started off from a Yeoman scaffold for an Angular project.
 
-TODO:
+## Local setup
 
-- e2e testing
+Run the following from the root folder of the project
 
-
-## Local setup:
-
-Run the following from the root folder of the project:
-
-### Install global Node packages if not already present:
+### Install global Node packages if not already present
 
 ```shell
 npm install -g grunt-cli
@@ -27,55 +21,61 @@ npm install -g karma
 npm install -g karma-cli
 ```
 
-### Install dependencies:
+### Install dependencies
 
 ```shell
 npm install
 bower install
 ```
 
-### Add Compose(MongoHQ) service login credentials as environment variables:
+### Add Compose(MongoHQ) service login credentials as environment variables
 
 ```
 DATABASE_USER: admin
 DATABASE_PASSWORD: c7241vD136g8l9S
 ```
 
-### Run tests
+### Run unit tests
 
 ```shell
 grunt test
 ```
+### Run e2e tests
 
-### Build production version:
+Make sure protractor is set up: http://angular.github.io/protractor/#/tutorial. Then run
+
+```shell
+protractor e2eTest/protractor.conf.js
+```
+
+### Build production version
 
 ```shell
 grunt build
 ```
 
-### Start the app:
+### Start the app
 
 ```shell
 node app
 ```
 
-Development version:
+Development version
 
 http://localhost:3000/
 
-Production version:
+Production version
 
 http://localhost:3000/production/
 
-## Heroku live demo:
+## Heroku live demo
 
 Demo is hosted on a free Heroku plan so it might take a few seconds to wake it up.
 
-Development version:
+Development version
 
 http://sky-mean-app.herokuapp.com/
 
-Production version:
+Production version
 
 http://sky-mean-app.herokuapp.com/production/
-
